@@ -30,14 +30,14 @@ public class Main {
        String[] alphabet = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
 
 
-        String generatedCode = "";
+        StringBuilder generatedCode = new StringBuilder();
         int numberOfPoints = 0;
 
         for (int i = 1; i <= 6; i++) {
 
             Random random = new Random();
             int random_int = random.nextInt(26);
-            generatedCode = generatedCode + alphabet[random_int];
+            generatedCode.append(alphabet[random_int]);
             switch (alphabet[random_int]) {
                 case "a" -> numberOfPoints = numberOfPoints + 1;
                 case "e" -> numberOfPoints = numberOfPoints + 2;
